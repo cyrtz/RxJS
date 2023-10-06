@@ -1,1 +1,1 @@
-# RxJSLerning
+# RxJSLearning
