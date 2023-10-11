@@ -10117,7 +10117,7 @@ var count_btn = document.querySelector('#count');
 var error_btn = document.querySelector('#error');
 var complete_btn = document.querySelector('#complete');
 var currentCounterLabel = document.querySelector('#currentCounter');
-var evenCounterLabel = document.querySelector('#eventCounter');
+var evenCounterLabel = document.querySelector('#evenCounter');
 var statusLabel = document.querySelector('#status');
 var counter = 0;
 var counter$;
@@ -10131,8 +10131,8 @@ var counter$;
   var evenCounter$ = counter$.pipe((0, operators_1.filter)(function (data) {
     return data % 2 === 0;
   }));
-  counter$.subscribe(function (data) {
-    evenCounterLabel.innerHTML = "\u5076\u6578\u8A08\u6578".concat(data);
+  evenCounter$.subscribe(function (data) {
+    evenCounterLabel.innerHTML = "\u5076\u6578\u8A08\u6578\uFF1A".concat(data);
   });
   counter$.subscribe({
     next: function next() {},
@@ -10180,7 +10180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64792" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64899" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

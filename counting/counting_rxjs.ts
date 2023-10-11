@@ -7,7 +7,7 @@ const count_btn = document.querySelector('#count')!;
 const error_btn = document.querySelector('#error')!;
 const complete_btn = document.querySelector('#complete')!;
 const currentCounterLabel = document.querySelector('#currentCounter')!;
-const evenCounterLabel = document.querySelector('#eventCounter')!;
+const evenCounterLabel = document.querySelector('#evenCounter')!;
 const statusLabel = document.querySelector('#status')!;
 
 let counter = 0;
@@ -25,8 +25,8 @@ fromEvent(start_btn, 'click').subscribe(() => {
   });
 
   const evenCounter$ = counter$.pipe(filter(data => data % 2 === 0));
-  counter$.subscribe(data => {
-    evenCounterLabel.innerHTML = `偶數計數${data}`;
+  evenCounter$.subscribe(data => {
+    evenCounterLabel.innerHTML = `偶數計數：${data}`;
   });
 
   counter$.subscribe({
